@@ -12,47 +12,83 @@
     <link rel="stylesheet" href="./static/css/home.css">
     <!-- link javascript -->
     <script src="./static/script.js" defer></script>
+    <script src="./static/javascript/carousel.js" defer></script>
+    <!-- connect jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" 
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" 
+            crossorigin="anonymous">
+    </script>
     <!-- google font  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
     <body>
+        <a class="skip-link" href="#main-content">Skip to main content</a>
         <header>
             <nav class = 'navbar'>
-                <a href="#">
-                    <img class = 'logo' src="./static/images/logo.png" alt="Dequesned Incline logo" width = '123px' height = '88px'>
+                <a href="./index.html">
+                    <img class = 'logo' src="./static/images/logo.png" alt="Dequesned Incline logo" width = '123' height = '88'>
                 </a>
                 <div class = 'full-container dark-blue'>
                     <div class = 'all-nav-links'>
-                    <ul class="nav-links">
-                        <li><a href="./views/about.html">About</a></li>
-                        <li><a href="#">Gift Shop</a></li>
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="#">Join Our Mailing List</a></li>
-                    </ul>
-
-                    <a href="./views/visit.html" class="primary-button">Plan Your Visit</a>
+                        <ul class="nav-links">
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./views/about.html">About</a></li>
+                            <li><a href="./views/giftshop.html">Gift Shop</a></li>
+                            <li><a href="./views/faqs.html">FAQs</a></li>
+                            <li><a href="./views/mailing.html">Join Our Mailing List</a></li>
+                        </ul>
+                        <div>
+                            <a href="./views/visit.html" class="primary-button" id = 'visit-nav'>Plan Your Visit</a>
+                        </div>
                     </div>
+                </div>
+                <div id = 'visit-hidden-nav' class = 'hide'>
+                    <ul>
+                        <li><a href="./views/visit/tickets.html">Tickets</a></li>
+                        <li><a href="./views/visit/directions.html">Directions</a></li>
+                        <li><a href="./views/visit/thingstodo.html">Things To Do</a></li>
+                    </ul>
                 </div>
             </nav>
 
-            <div class="hero">
+            <div class="carousel-container">
+                <!-- Background sliding images -->
+                <div class="carousel-inner">
+                  <div class="carousel-slide" id="home-hero1"></div>
+                  <div class="carousel-slide" id="home-hero2"></div>
+                  <div class="carousel-slide" id="home-hero3"></div>
+                </div>
+            
+                <!-- Dot indicators -->
+                <div class="carousel-indicators">
+                  <div class="dot active"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                </div>
+            
+                <!-- Left and Right Arrows -->
+                <div class="carousel-arrow carousel-arrow-left">&#10094;</div>
+                <div class="carousel-arrow carousel-arrow-right">&#10095;</div>
+            
+                <!-- Static content overlay -->
                 <div class="hero-content">
                   <h1 class="hero-title inria-serif-bold">THE DUQUESNE INCLINE</h1>
                   <p class="hero-subtitle inria-serif-regular">
                     Take A Step Back In Time On A Century-Old Cable Car And See The Best Views
-                    Of Downtown Pittsburgh While Riding One Of The Few Remaining Inclines
-                    In The Country.
+                    Of Downtown Pittsburgh While Riding One Of The Few Remaining Inclines In The Country.
                   </p>
-                  <a href="#" class="cta-btn">Check Ticket Fares</a>
+                  <div>
+                    <a href="./views/visit/tickets.html" class="cta-btn">Check Ticket Fares</a>
+                  </div>
                 </div>
-            </div>
+              </div>
             
             
         </header>
 
-        <div class = "main">
+        <div class = "main" id = 'main-content'>
             <div class = "section-background white-background">
             <p class="info-text">
 Opened On May 20, 1877, The Duquesne Incline Was Rescued And Restored
@@ -64,29 +100,29 @@ And Visitors With Its Original, Elegant, Wooden Cable Cars.
                 <!-- Ticketing Card -->
                 <div class="info-card yellow-background  padding-30px">
                     <div class="info-card-content">
-                        <h2>Ticketing</h2>
+                        <h2 tabindex = '0'>Ticketing</h2>
                         <p>
-                            No Reservations or Advance Tickets<br /><br />
+                            No Reservations or Advance Tickets<br><br>
                             Cash fares as well as Port Authority connect cards are accepted as payment.
                         </p>
                     </div>
-                  <a href="#" class="card-btn stretch">Check out Fares</a>
+                  <a href="./views/visit/tickets.html" class="card-btn stretch">Check out Fares</a>
                 </div>
             
                 <!-- Address Card -->
                 <div class="info-card yellow-background  padding-30px">
                     <div class="info-card-content">
-                        <h2>Address</h2>
-                        <p>1197 West Carson Street<br />Pittsburgh, PA 15219</p>
+                        <h2 tabindex = '0'>Address</h2>
+                        <p>1197 West Carson Street<br>Pittsburgh, PA 15219</p>
                     </div>
-                  <a href="#" class="card-btn stretch">Get Directions</a>
+                  <a href="./views/visit/directions.html" class="card-btn stretch">Get Directions</a>
                 </div>
             
                 <!-- Hours Card -->
                 <div class="info-card yellow-background padding-30px">
                     <div class="info-card-content">
-                        <h2>Hours</h2>
-                        <p>Every day of the year:<br />6:30 a.m. to 12:30 a.m.</p>
+                        <h2 tabindex = '0'>Hours</h2>
+                        <p>Every day of the year:<br>6:30 a.m. to 12:30 a.m.</p>
                     </div>
                 </div>
             </div>
@@ -102,14 +138,14 @@ And Visitors With Its Original, Elegant, Wooden Cable Cars.
             </div>
             <div class = "section-background white-background">
                 <div id="tour-section">
-                    <h2 class = "section-title">Schedule Your Tour</h2>
+                    <h2 class = "section-title" tabindex = '0'>Schedule Your Tour</h2>
                 
                     <div class="content">
                     <!-- City Tours Card -->
                     <div class="image-card city-tours">
                         
                         <h3>CITY TOURS</h3>
-                        <a href="#" class="card-btn">Read More</a>
+                        <a href="./views/visit/thingstodo.html" class="card-btn">Read More</a>
                         
                     </div>
                 
@@ -117,7 +153,7 @@ And Visitors With Its Original, Elegant, Wooden Cable Cars.
                     <div class="image-card group-tours">
                         
                         <h3>GROUP TOURS</h3>
-                        <a href="#" class="card-btn">Read More</a>
+                        <a href="./views/visit/thingstodo.html" class="card-btn">Read More</a>
                         
                     </div>
                     </div>
@@ -125,11 +161,11 @@ And Visitors With Its Original, Elegant, Wooden Cable Cars.
 
             </div>
             <div class = "section-background yellow-background">
-                <h2 class="section-title">RELATED STORIES</h2>
+                <h2 class="section-title" tabindex = '0'>RELATED STORIES</h2>
                 <div class="content">
                     <!-- Card 1 -->
                     <div class="info-card white-background padding-30px">
-                    <img src="./static/images/articles/1.png" alt="Mount Washington" />
+                    <img src="./static/images/articles/1.png" alt="Mount Washington">
                     <div class="info-card-content">
                         <h3>5 Reasons To Love Living In Mount Washington</h3>
                         <p>02/25/2025</p>
@@ -143,7 +179,7 @@ And Visitors With Its Original, Elegant, Wooden Cable Cars.
 
                     <!-- Card 2 -->
                     <div class="info-card white-background padding-30px">
-                    <img src="./static/images/articles/2.png" alt="Pittsburgh Incline on the PA Road" />
+                    <img src="./static/images/articles/2.png" alt="Pittsburgh Incline on the PA Road">
                     <div class="info-card-content">
                         <h3>Pittsburgh Incline | On The PA Road</h3>
                         <p>10/23/2024</p>
@@ -157,7 +193,7 @@ And Visitors With Its Original, Elegant, Wooden Cable Cars.
 
                     <!-- Card 3 -->
                     <div class="info-card white-background padding-30px">
-                    <img src="./static/images/articles/3.png" alt="Historic Duquesne Incline" />
+                    <img src="./static/images/articles/3.png" alt="Historic Duquesne Incline">
                     <div class="info-card-content">
                         <h3>Take A Ride On Pittsburgh’s Historic Duquesne Incline</h3>
                         <p>04/08/2025</p>
@@ -178,16 +214,17 @@ And Visitors With Its Original, Elegant, Wooden Cable Cars.
             <div class="footer-top">
               <!-- Logo -->
               <div class="footer-logo">
-                <img class = 'logo' src="./static/images/logo.png" alt="Dequesned Incline logo" width = '123px' height = '88px'>
+                <img class = 'logo' src="./static/images/logo.png" alt="Dequesned Incline logo" width = '123' height = '88'>
               </div>
           
               <!-- Navigation Links -->
               <ul class="footer-nav">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Gift Shop</a></li>
-                <li><a href="#">FAQs</a></li>
-                <li><a href="#">Join Our Mailing List</a></li>
-                <li><a href="#" class="primary-button">Plan Your Visit</a></li>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./views/about.html">About</a></li>
+                <li><a href="./views/giftshop.html">Gift Shop</a></li>
+                <li><a href="./views/faqs.html">FAQs</a></li>
+                <li><a href="./views/mailing.html">Join Our Mailing List</a></li>
+                <li><a href="./views/visit.html" class="primary-button">Plan Your Visit</a></li>
               </ul>
             </div>
           
@@ -200,9 +237,9 @@ And Visitors With Its Original, Elegant, Wooden Cable Cars.
             <!-- Social Icons & Copyright -->
             <div class="footer-bottom">
               <ul class="footer-social">
-                <li><a href="#"><img src="static/images/socialmedia/facebook.png" alt="Facebook" /></a></li>
-                <li><a href="#"><img src="static/images/socialmedia/x.png" alt="X" /></a></li>
-                <li><a href="#"><img src="static/images/socialmedia/ins.png" alt="Instagram" /></a></li>
+                <li><a href="https://www.facebook.com/TheDuquesneIncline/photos/"><img src="static/images/socialmedia/facebook.png" alt="Facebook"></a></li>
+                <li><a href="https://x.com/duquesneincline"><img src="static/images/socialmedia/x.png" alt="X"></a></li>
+                <li><a href="https://www.instagram.com/explore/locations/289145085/duquesne-incline-pittsburgh/?hl=en"><img src="static/images/socialmedia/ins.png" alt="Instagram"></a></li>
               </ul>
           
               <p class="copyright">

@@ -9,35 +9,51 @@
     <meta name="description" content="Your name professional website">
     <!-- link css -->
     <link rel="stylesheet" href="../static/css/style.css">
-    <link rel="stylesheet" href="../static/css/home.css">
+    <link rel="stylesheet" href="../static/css/faq.css">
     <!-- link javascript -->
-    <script src="../static/script.js" defer></script>
+    <script src= "../static/script.js" defer></script>
+    <script src="../static/javascript/collapse.js" defer></script>
+    <!-- connect jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" 
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" 
+            crossorigin="anonymous">
+    </script>
     <!-- google font  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
     <body>
+        <a class="skip-link" href="#main-content">Skip to main content</a>
         <header>
             <nav class = 'navbar'>
                 <a href="../index.html">
-                    <img class = 'logo' src="../static/images/logo.png" alt="Dequesned Incline logo" width = '123px' height = '88px'>
+                    <img class = 'logo' src="../static/images/logo.png" alt="Dequesned Incline logo" width = '123' height = '88'>
                 </a>
                 <div class = 'full-container dark-blue'>
                     <div class = 'all-nav-links'>
                     <ul class="nav-links">
-                        <li><a href="./about.html">About</a></li>
-                        <li><a href="./giftshop.html">Gift Shop</a></li>
-                        <li><a href="./faqs.html">FAQs</a></li>
-                        <li><a href="./mailing.html">Join Our Mailing List</a></li>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../views/about.html">About</a></li>
+                        <li><a href="../views/giftshop.html">Gift Shop</a></li>
+                        <li><a href="../views/faqs.html">FAQs</a></li>
+                        <li><a href="../views/mailing.html">Join Our Mailing List</a></li>
                     </ul>
-
-                    <a href="./visit.html" class="primary-button">Plan Your Visit</a>
+                    <div>
+                        <a href="../views/visit.html" class="primary-button" id = 'visit-nav'>Plan Your Visit</a>
                     </div>
+                    </div>
+                </div>
+                <div id = 'visit-hidden-nav' class = 'hide'>
+                    <ul>
+                        <li><a href="../views/visit/tickets.html">Tickets</a></li>
+                        <li><a href="../views/visit/directions.html">Directions</a></li>
+                        <li><a href="../views/visit/thingstodo.html">Things To Do</a></li>
+                    </ul>
                 </div>
             </nav>
 
-            <div class="hero">
+            <div class="hero" id = 'faq-hero'>
                 <div class="hero-content">
                   <h1 class="hero-title inria-serif-bold">FREQUENTLY ASKED QUESTIONS</h1>
                   <p class="hero-subtitle inria-serif-regular">
@@ -49,46 +65,129 @@
             
         </header>
 
-        <div class = "main">
+        <div class = "main" id = 'main-content'>
+            <div class = 'section-background white-background'>
+              <div class = 'content content-left'>
+                <p tabindex = '0'>Everything you need to know about the incline. Can’t find an answer? Contact our Team</p>
+
+              
+                <div class="collapse-item">
+                  <button class="collapse-question">
+                    <span>How do I pay for a ride on the Duquesne Incline?</span>
+                    <span class="collapse-icon">+</span>
+                  </button>
+
+                  <div class="collapse-answer hide">
+                    <p>
+                      You must pay the exact cash fare upon arrival—no tickets, 
+                      advance payments, reservations, or debit/credit cards are 
+                      accepted. A change machine is available for your convenience, 
+                      and using the exact fare speeds up the process.
+                    </p>
+                  </div>
+                </div>
+                <div class="collapse-item">
+                  <button class="collapse-question">
+                    <span>Are there any discounts available for seniors?</span>
+                    <span class="collapse-icon">+</span>
+                  </button>
+
+                  <div class="collapse-answer hide">
+                    <p>
+                      Yes. Pennsylvania seniors 65 and older can ride free if 
+                      they present a BLUE or YELLOW PRT card or a Senior 
+                      ConnectCard. However, the Duquesne Incline requires a 
+                      Pennsylvania Senior Citizen Transit ID card as proof of 
+                      discount eligibility for reimbursement by the Commonwealth 
+                      of PA.
+                    </p>
+                  </div>
+                </div>
+                <div class="collapse-item">
+                  <button class="collapse-question">
+                    <span>Are restrooms available on the Duquesne Incline?</span>
+                    <span class="collapse-icon">+</span>
+                  </button>
+
+                  <div class="collapse-answer hide">
+                    <p>No, there are no restrooms available.</p>
+                  </div>
+                </div>
+                <div class="collapse-item">
+                  <button class="collapse-question">
+                    <span>When are the busiest times and how long is the wait?</span>
+                    <span class="collapse-icon">+</span>
+                  </button>
+
+                  <div class="collapse-answer hide">
+                    <p>
+                      Saturday and Sunday afternoons are the busiest times. You 
+                      can expect to wait in line for about 10 minutes in both 
+                      directions.
+                    </p>
+                  </div>
+                </div>
+                <div class="collapse-item">
+                  <button class="collapse-question">
+                    <span>Is the Duquesne Incline wheelchair accessible?</span>
+                    <span class="collapse-icon">+</span>
+                  </button>
+
+                  <div class="collapse-answer hide">
+                    <p>
+                      Yes, the Upper Station located at 1220 Grandview Ave, 
+                      Pittsburgh, PA 15211, and the observation deck are 
+                      wheelchair accessible. The historic (original) incline cars 
+                      can accommodate wheelchairs up to 25 inches in width, 
+                      though please note that there are many steps to traverse 
+                      from the lower station parking lot.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+              
+            </div>
             
         </div>
         
         <footer class="site-footer">
-            <div class="footer-top">
-              <!-- Logo -->
-              <div class="footer-logo">
-                <img class = 'logo' src="../static/images/logo.png" alt="Dequesned Incline logo" width = '123px' height = '88px'>
-              </div>
-          
-              <!-- Navigation Links -->
-              <ul class="footer-nav">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Gift Shop</a></li>
-                <li><a href="#">FAQs</a></li>
-                <li><a href="#">Join Our Mailing List</a></li>
-                <li><a href="#" class="primary-button">Plan Your Visit</a></li>
-              </ul>
+          <div class="footer-top">
+            <!-- Logo -->
+            <div class="footer-logo">
+              <img class = 'logo' src="../static/images/logo.png" alt="Dequesned Incline logo" width = '123' height = '88'>
             </div>
-          
-            <div class="footer-contact">
-              <p>Phone: 412-381-1665</p>
-              <p>Fax: 412-381-1943 | <a href="mailto:duq.incline@duquesneincline.org">duq.incline@duquesneincline.org</a></p>
-              <p>Mailing: 1220 Grandview Ave. Pittsburgh, PA 15211</p>
-            </div>
-          
-            <!-- Social Icons & Copyright -->
-            <div class="footer-bottom">
-              <ul class="footer-social">
-                <li><a href="#"><img src="../static/images/socialmedia/facebook.png" alt="Facebook" /></a></li>
-                <li><a href="#"><img src="../static/images/socialmedia/x.png" alt="X" /></a></li>
-                <li><a href="#"><img src="../static/images/socialmedia/ins.png" alt="Instagram" /></a></li>
-              </ul>
-          
-              <p class="copyright">
-                &copy; 2025. All Rights Reserved.
-              </p>
-            </div>
-        </footer>
+        
+            <!-- Navigation Links -->
+            <ul class="footer-nav">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="./about.html">About</a></li>
+              <li><a href="./giftshop.html">Gift Shop</a></li>
+              <li><a href="./faqs.html">FAQs</a></li>
+              <li><a href="./mailing.html">Join Our Mailing List</a></li>
+              <li><a href="./visit.html" class="primary-button">Plan Your Visit</a></li>
+            </ul>
+          </div>
+        
+          <div class="footer-contact">
+            <p>Phone: 412-381-1665</p>
+            <p>Fax: 412-381-1943 | <a href="mailto:duq.incline@duquesneincline.org">duq.incline@duquesneincline.org</a></p>
+            <p>Mailing: 1220 Grandview Ave. Pittsburgh, PA 15211</p>
+          </div>
+        
+          <!-- Social Icons & Copyright -->
+          <div class="footer-bottom">
+            <ul class="footer-social">
+              <li><a href="https://www.facebook.com/TheDuquesneIncline/photos/"><img src="../static/images/socialmedia/facebook.png" alt="Facebook"></a></li>
+              <li><a href="https://x.com/duquesneincline"><img src="../static/images/socialmedia/x.png" alt="X"></a></li>
+              <li><a href="https://www.instagram.com/explore/locations/289145085/duquesne-incline-pittsburgh/?hl=en"><img src="../static/images/socialmedia/ins.png" alt="Instagram"></a></li>
+            </ul>
+        
+            <p class="copyright">
+              &copy; 2025. All Rights Reserved.
+            </p>
+          </div>
+      </footer>
         
     </body>
 </html>

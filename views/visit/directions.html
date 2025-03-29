@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dequesned Incline Memorandum</title>
+    <meta name="author" content="Your name">
+    <meta name="keywords" content="Carnegie Mellon University, Information Systems">
+    <meta name="description" content="Your name professional website">
+    <!-- link css -->
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <link rel="stylesheet" href="../../static/css/map.css">
+    <!-- link javascript -->
+    <script src="../../static/javascript/map.js" defer></script>
+    <script src="../../static/script.js" defer></script>
+    <!-- connect jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" 
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" 
+            crossorigin="anonymous">
+    </script>
+    <!-- link google map -->
+    <script>
+      (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+        key: "AIzaSyDZGhoFJfet3vFvfOUlSZ4LbnGxusJ3eYk",
+        v: "weekly",
+        // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+        // Add other bootstrap parameters as needed, using camel case.
+      });
+    </script>
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+    <body>
+        <a class="skip-link" href="#main-content">Skip to main content</a>
+        <header>
+          <nav class = 'navbar'>
+            <a href="../../index.html">
+                <img class = 'logo' src="../../static/images/logo.png" alt="Dequesned Incline logo" width = '123' height = '88'>
+            </a>
+            <div class = 'full-container dark-blue'>
+                <div class = 'all-nav-links'>
+                <ul class="nav-links">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../views/about.html">About</a></li>
+                    <li><a href="../../views/giftshop.html">Gift Shop</a></li>
+                    <li><a href="../../views/faqs.html">FAQs</a></li>
+                    <li><a href="../../views/mailing.html">Join Our Mailing List</a></li>
+                </ul>
+                <div>
+                    <a href="../../views/visit.html" class="primary-button" id = 'visit-nav'>Plan Your Visit</a>
+                </div>
+                </div>
+            </div>
+            <div id = 'visit-hidden-nav' class = 'hide'>
+                <ul>
+                    <li><a href="../../views/visit/tickets.html">Tickets</a></li>
+                    <li><a href="../../views/visit/directions.html">Directions</a></li>
+                    <li><a href="../../views/visit/thingstodo.html">Things To Do</a></li>
+                </ul>
+            </div>
+          </nav>
+
+            <div class="hero" id = 'directions-hero'>
+                <div class="hero-content">
+                  <h1 class="hero-title inria-serif-bold">Getting to the Incline</h1>
+                  <p class="hero-subtitle inria-serif-regular">
+                    Visit the interior of the incline and watch the machinery while it operates.  
+                  </p>
+                </div>
+            </div>
+            
+            
+        </header>
+
+        <div class = "main" id = 'main-content'>
+          <div class = 'section-background white-background'>
+            <h2 class = 'section-title' tabindex = '0'> Address Information</h2>
+            <div class = 'content content-left'>
+              <p>
+                1197 West Carson St. <br>
+                Pittsburgh, PA.  15219
+              </p>
+            </div>
+          </div>  
+
+          <div class = 'section-background yellow-background'>
+            <h2 class = 'section-title' tabindex = '0'>The incline is here!</h2>
+            <div class = 'content'>
+              <div id="map"></div>
+            </div>
+            <h2 class = 'section-title' tabindex = '0'>check our your position relative to the incline</h2>
+            <div class = 'content'>
+              <div id="map2"></div>
+            </div>
+          </div>
+
+          
+        </div>
+        
+        <footer class="site-footer">
+          <div class="footer-top">
+            <!-- Logo -->
+            <div class="footer-logo">
+              <img class = 'logo' src="../../static/images/logo.png" alt="Dequesned Incline logo" width = '123' height = '88'>
+            </div>
+        
+            <!-- Navigation Links -->
+            <ul class="footer-nav">
+              <li><a href="../../index.html">Home</a></li>
+              <li><a href="../about.html">About</a></li>
+              <li><a href="../giftshop.html">Gift Shop</a></li>
+              <li><a href="../faqs.html">FAQs</a></li>
+              <li><a href="../mailing.html">Join Our Mailing List</a></li>
+              <li><a href="../visit.html" class="primary-button">Plan Your Visit</a></li>
+            </ul>
+          </div>
+        
+          <div class="footer-contact">
+            <p>Phone: 412-381-1665</p>
+            <p>Fax: 412-381-1943 | <a href="mailto:duq.incline@duquesneincline.org">duq.incline@duquesneincline.org</a></p>
+            <p>Mailing: 1220 Grandview Ave. Pittsburgh, PA 15211</p>
+          </div>
+        
+          <!-- Social Icons & Copyright -->
+          <div class="footer-bottom">
+            <ul class="footer-social">
+              <li><a href="https://www.facebook.com/TheDuquesneIncline/photos/"><img src="../../static/images/socialmedia/facebook.png" alt="Facebook"></a></li>
+              <li><a href="https://x.com/duquesneincline"><img src="../../static/images/socialmedia/x.png" alt="X"></a></li>
+              <li><a href="https://www.instagram.com/explore/locations/289145085/duquesne-incline-pittsburgh/?hl=en"><img src="../../static/images/socialmedia/ins.png" alt="Instagram"></a></li>
+            </ul>
+        
+            <p class="copyright">
+              &copy; 2025. All Rights Reserved.
+            </p>
+          </div>
+      </footer>
+        
+    </body>
+</html>

@@ -1,0 +1,38 @@
+/* Basic table styling for fare tables */
+.fare-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+/* Table header cells */
+.fare-table th {
+    background-color: #e0e0e0; /* Light gray or your choice */
+    padding: 20px;
+    /* ineria serif font */
+    color: #353851;
+
+    font-family: "Inria Serif";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+/* Table body cells */
+.fare-table td {
+    border: 1px solid #ccc; 
+    padding: 0.75rem;
+    color: #000;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 130%; /* 31.2px */
+}
+
+/* Optional: alternate row background or any additional styling */
+.fare-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}

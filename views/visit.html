@@ -9,35 +9,50 @@
     <meta name="description" content="Your name professional website">
     <!-- link css -->
     <link rel="stylesheet" href="../static/css/style.css">
-    <link rel="stylesheet" href="../static/css/home.css">
+    <link rel="stylesheet" href="../static/css/visit.css">
     <!-- link javascript -->
     <script src="../static/script.js" defer></script>
+    <!-- include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" 
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" 
+            crossorigin="anonymous">
+    </script>
     <!-- google font  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
     <body>
+        <a class="skip-link" href="#main-content">Skip to main content</a>
         <header>
-            <nav class = 'navbar'>
-                <a href="../index.html">
-                    <img class = 'logo' src="../static/images/logo.png" alt="Dequesned Incline logo" width = '123px' height = '88px'>
-                </a>
-                <div class = 'full-container dark-blue'>
-                    <div class = 'all-nav-links'>
-                    <ul class="nav-links">
-                        <li><a href="./about.html">About</a></li>
-                        <li><a href="./giftshop.html">Gift Shop</a></li>
-                        <li><a href="./faqs.html">FAQs</a></li>
-                        <li><a href="./mailing.html">Join Our Mailing List</a></li>
-                    </ul>
-
-                    <a href="./visit.html" class="primary-button">Plan Your Visit</a>
-                    </div>
+          <nav class = 'navbar'>
+            <a href="../index.html">
+                <img class = 'logo' src="../static/images/logo.png" alt="Dequesned Incline logo" width = '123' height = '88'>
+            </a>
+            <div class = 'full-container dark-blue'>
+                <div class = 'all-nav-links'>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../views/about.html">About</a></li>
+                    <li><a href="../views/giftshop.html">Gift Shop</a></li>
+                    <li><a href="../views/faqs.html">FAQs</a></li>
+                    <li><a href="../views/mailing.html">Join Our Mailing List</a></li>
+                </ul>
+                <div>
+                    <a href="../views/visit.html" class="primary-button" id = 'visit-nav'>Plan Your Visit</a>
                 </div>
-            </nav>
+                </div>
+            </div>
+            <div id = 'visit-hidden-nav' class = 'hide'>
+                <ul>
+                    <li><a href="../views/visit/tickets.html">Tickets</a></li>
+                    <li><a href="../views/visit/directions.html">Directions</a></li>
+                    <li><a href="../views/visit/thingstodo.html">Things To Do</a></li>
+                </ul>
+            </div>
+        </nav>
 
-            <div class="hero">
+            <div class="hero" id = 'visit-hero'>
                 <div class="hero-content">
                   <h1 class="hero-title inria-serif-bold">PLAN YOU VISIT TO THE INCLINE!</h1>
                   <p class="hero-subtitle inria-serif-regular">
@@ -49,46 +64,116 @@
             
         </header>
 
-        <div class = "main">
-            
+        <div class = "main" id = 'main-content'>
+            <div class = 'section-background white-background'>
+                <h2 class = 'section-title'>Ready to Explore?</h2>
+                <div class = 'content content-left'>
+                  <p>
+                    Visit the interior of the incline and watch the machinery 
+                    while it operates. Explore the upper station houses a museum 
+                    of Pittsburgh history. discover Unusual Pittsburgh souvenirs, 
+                    maps and photos at the gift shop
+                  </p>
+                  <a href="./visit/tickets.html" class="cta-btn">Check Ticket Fares</a>
+                </div>
+
+            </div>
+            <div class = 'section-background yellow-background'>
+              <h2 class = 'section-title'>Hours of Operatoins</h2>
+              <div class = 'content content-left'> 
+                <p>
+                  Every day of the year: <br>
+                  6:30 a.m. to 12:30 a.m.
+                </p>
+              </div>
+            </div>
+            <div class = 'section-background white-background'>
+              <h2 class = 'section-title'>Check out Things to do</h2>
+                <div id="tour-section">
+                
+                    <div class="content">
+                      <!-- City Tours Card -->
+                      <div class="image-card city-tours">
+                          <h3>CITY TOURS</h3>
+                          <a href="./visit/thingstodo.html" class="card-btn">Read More</a>
+                          
+                      </div>
+                  
+                      <!-- Group Tours Card -->
+                      <div class="image-card group-tours">
+                          <h3>GROUP TOURS</h3>
+                          <a href="./visit/thingstodo.html" class="card-btn">Read More</a>
+                          
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class = 'section-background yellow-background'>
+              <h2 class = 'section-title'>Getting Here</h2>
+              <div class = 'content flex flex-2'>
+                <div>
+                  <p class = 'text-content'>The Duquesne Incline is located just minutes from downtown 
+                    Pittsburgh on the historic Mount Washington. <br><br>
+
+                    The lower station entrance is conveniently accessible from 
+                    West Carson Street, where you'll find ample free parking in 
+                    our dedicated lot. Exit at the designated Mount Washington 
+                    ramp, follow West Carson Street, and look for clear signage 
+                    directing you to the incline's entrance and parking area.
+                  <br><br>
+                  </p>
+                  <a href="./visit/directions.html" class="cta-btn">Get Directions</a>
+                </div>
+                <div>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.598072748288!2d-80.02211661114498!3d40.439898000000035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f6af9e6ab935%3A0xe871d2bbc2032b83!2sDuquesne%20Incline!5e0!3m2!1sen!2sus!4v1742623820740!5m2!1sen!2sus" 
+                          class = 'map-iframe'
+                          style="border:0;" 
+                          allowfullscreen="" 
+                          loading="lazy" 
+                          referrerpolicy="no-referrer-when-downgrade">
+                  </iframe>
+                </div>
+              </div>
+            </div>
         </div>
         
-        <footer class="site-footer">
-            <div class="footer-top">
-              <!-- Logo -->
-              <div class="footer-logo">
-                <img class = 'logo' src="../static/images/logo.png" alt="Dequesned Incline logo" width = '123px' height = '88px'>
-              </div>
-          
-              <!-- Navigation Links -->
-              <ul class="footer-nav">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Gift Shop</a></li>
-                <li><a href="#">FAQs</a></li>
-                <li><a href="#">Join Our Mailing List</a></li>
-                <li><a href="#" class="primary-button">Plan Your Visit</a></li>
-              </ul>
+      <footer class="site-footer">
+          <div class="footer-top">
+            <!-- Logo -->
+            <div class="footer-logo">
+              <img class = 'logo' src="../static/images/logo.png" alt="Dequesned Incline logo" width = '123' height = '88'>
             </div>
-          
-            <div class="footer-contact">
-              <p>Phone: 412-381-1665</p>
-              <p>Fax: 412-381-1943 | <a href="mailto:duq.incline@duquesneincline.org">duq.incline@duquesneincline.org</a></p>
-              <p>Mailing: 1220 Grandview Ave. Pittsburgh, PA 15211</p>
-            </div>
-          
-            <!-- Social Icons & Copyright -->
-            <div class="footer-bottom">
-              <ul class="footer-social">
-                <li><a href="#"><img src="../static/images/socialmedia/facebook.png" alt="Facebook" /></a></li>
-                <li><a href="#"><img src="../static/images/socialmedia/x.png" alt="X" /></a></li>
-                <li><a href="#"><img src="../static/images/socialmedia/ins.png" alt="Instagram" /></a></li>
-              </ul>
-          
-              <p class="copyright">
-                &copy; 2025. All Rights Reserved.
-              </p>
-            </div>
-        </footer>
+        
+            <!-- Navigation Links -->
+            <ul class="footer-nav">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="./about.html">About</a></li>
+              <li><a href="./giftshop.html">Gift Shop</a></li>
+              <li><a href="./faqs.html">FAQs</a></li>
+              <li><a href="./mailing.html">Join Our Mailing List</a></li>
+              <li><a href="./visit.html" class="primary-button">Plan Your Visit</a></li>
+            </ul>
+          </div>
+        
+          <div class="footer-contact">
+            <p>Phone: 412-381-1665</p>
+            <p>Fax: 412-381-1943 | <a href="mailto:duq.incline@duquesneincline.org">duq.incline@duquesneincline.org</a></p>
+            <p>Mailing: 1220 Grandview Ave. Pittsburgh, PA 15211</p>
+          </div>
+        
+          <!-- Social Icons & Copyright -->
+          <div class="footer-bottom">
+            <ul class="footer-social">
+              <li><a href="https://www.facebook.com/TheDuquesneIncline/photos/"><img src="../static/images/socialmedia/facebook.png" alt="Facebook"></a></li>
+              <li><a href="https://x.com/duquesneincline"><img src="../static/images/socialmedia/x.png" alt="X"></a></li>
+              <li><a href="https://www.instagram.com/explore/locations/289145085/duquesne-incline-pittsburgh/?hl=en"><img src="../static/images/socialmedia/ins.png" alt="Instagram"></a></li>
+            </ul>
+        
+            <p class="copyright">
+              &copy; 2025. All Rights Reserved.
+            </p>
+          </div>
+      </footer>
         
     </body>
 </html>

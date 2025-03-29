@@ -1,0 +1,22 @@
+:root {
+    --dark-blue: #353851;
+    --primary-color: #D77054;
+    --secondary-color: #79A88F;
+    --primary-background: #FFFFFF;
+    --secondary-background: #F2EFD9;
+}
+
+#map {
+    height: 800px;
+    width: 100%;
+}
+
+.space {
+    padding: 30px;
+    background: red;
+}
+
+#map2 {
+    height: 1000px;
+    width: 100%;
+}

@@ -1,0 +1,41 @@
+:root {
+    --dark-blue: #353851;
+    --primary-color: #D77054;
+    --secondary-color: #79A88F;
+    --primary-background: #FFFFFF;
+    --secondary-background: #F2EFD9;
+}
+
+#history-read-more, #history-read-less {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+#history-read-more:hover {
+    color: #a75037;
+}
+
+/* ////////////////// fun fact ////////////////// */
+
+.fun-facts-table {
+  width: 100%;
+  border-collapse: collapse; 
+  table-layout: fixed;
+}
+
+.fun-facts-table tr {
+  border-bottom: 1px solid #000;
+}
+
+.fun-facts-table tr:last-of-type {
+  border-bottom: none;
+}
+
+.fun-facts-table td {
+  padding: 1rem 0;
+  vertical-align: top;
+}
+
+.fun-fact-heading {
+  font-weight: 700;
+}
