@@ -1,11 +1,15 @@
-let map;
-let directionsService;
-let directionsRenderer;
 
+// Reference: https://developers.google.com/maps/documentation/javascript/load-maps-js-api
+let map;
+
+// convert degrees to radians
 function toRadians(deg) {
   return deg * Math.PI / 180;
 }
 
+// Haversine formula to calculate distance between two points on the Earth
+// given their latitude and longitude
+// Reference: https://en.wikipedia.org/wiki/Haversine_formula
 function haversineDistance(lat1, lon1, lat2, lon2) {
   const R = 6371;
   const dLat = toRadians(lat2 - lat1);
@@ -17,6 +21,8 @@ function haversineDistance(lat1, lon1, lat2, lon2) {
   return R * c;
 }
 
+// Function to calculate zoom level based on distance
+// Reference: https://stackoverflow.com/questions/9356724/google-map-api-zoom-range
 function calculateZoomLevel(distance) {
   const distanceMeters = distance * 1000;
 
@@ -38,13 +44,15 @@ function calculateZoomLevel(distance) {
 }
 
 
+// Function to initialize the map
+// Reference: https://developers.google.com/maps/documentation/javascript/load-maps-js-api
+// Reference: https://developers.google.com/maps/documentation/javascript/examples/streetview-overlays
 
 async function initMap1() {
-    // The location of Uluru
-    const incline = { lat: 40.4399, lng: -80.0176 };
+    // The location of incline
+    const incline = { lat: 40.440354, lng: -80.016899 };
+    // center on the park to display downtown pittsburgh on map
     const park = {lat: 40.44167, lng: -80.01194}
-    const marketSquare = {lat: 40.4417, lng: -80.0031}
-    const PPG = {lat: 40.4406, lng: -80.0009}
 
     const { Map } = await google.maps.importLibrary("maps");
     const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary("marker");
@@ -54,7 +62,23 @@ async function initMap1() {
       center: park,
       mapId: "250-WEBDEV",
     };
+    // set map
     map = new Map(document.getElementById('map'), mapOptions);
+
+    // set street view
+    const panorama = new google.maps.StreetViewPanorama(
+      document.getElementById("map"),
+      {
+        position: incline,
+        pov: {
+          heading: 240,
+          pitch: 10,
+        },
+      },
+    );
+
+    // set the map to street view
+    map.setStreetView(panorama);
 
     const mainPin = new PinElement({
       scale: 2.5,
@@ -69,38 +93,26 @@ async function initMap1() {
       title: 'THE INCLINE!',
       content: mainPin.element,
     });
-    const marker2 = new AdvancedMarkerElement({
-      map,
-      position: park,
-      title: 'Point State Park',
-    });
 
-    const marker3 = new AdvancedMarkerElement({
-      map,
-      position: marketSquare,
-      title: 'Market Square',
-    });
-
-    const marker4 = new AdvancedMarkerElement({
-      map,
-      position: PPG,
-      title: 'PPG Place',
-    });
 }
 
-
+// Function to initialize the map
+// Reference: https://developers.google.com/maps/documentation/javascript/load-maps-js-api
 async function initMap2(mapID, origin, mapCenter, zoomLevel) {
-  // The location of Uluru
+  // The location of incline
   const incline = { lat: 40.4399, lng: -80.0176 };
 
   const { Map } = await google.maps.importLibrary("maps");
   const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary("marker");
 
+  // set map options
   let mapOptions = {
     zoom: zoomLevel,
     center: mapCenter,
     mapId: "250-WEBDEV",
   };
+
+  // customize pin
   const mainPin = new PinElement({
     scale: 2.5,
     background: "#D77054",
@@ -108,6 +120,7 @@ async function initMap2(mapID, origin, mapCenter, zoomLevel) {
     glyphColor: '#353851',
   });
 
+  // initialize map and markers
   map = new Map(document.getElementById(mapID), mapOptions);
   const marker = new AdvancedMarkerElement({
     map,
@@ -123,24 +136,35 @@ async function initMap2(mapID, origin, mapCenter, zoomLevel) {
   });
 }
 
-
+// Reference: https://www.youtube.com/watch?v=916M64DuRnk
+// Reference: https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API
 const successCallback = (position) => {
+  // get the current location of the user
   const { latitude, longitude } = position.coords;
+  // incline coordinates
   const incline = { lat: 40.4399, lng: -80.0176 };
 
+  // find the center between two points
   const MAPCENTER = { 
     lat: (latitude + incline.lat) / 2, 
     lng: (longitude + incline.lng) / 2 
   };
 
+  // calculate the distance between the two points
   const distance = haversineDistance(latitude, longitude, incline.lat, incline.lng);
   
+  // calculate the zoom level based on the distance
   const zoomLevel = calculateZoomLevel(distance);
+
+  // initialize map if success
   initMap2('map2', { lat: latitude, lng: longitude }, MAPCENTER, zoomLevel);
 };
 
+// error detection
 const errorCallback = (error) => {
   console.error(error);
 }
+// initialize map
 initMap1();
+
 navigator.geolocation.getCurrentPosition(successCallback, errorCallback);

@@ -6,6 +6,8 @@
     --secondary-background: #F2EFD9;
 }
 
+/* ////////////////// read more buttons ////////////////// */
+
 #history-read-more, #history-read-less {
     color: var(--primary-color);
     font-weight: 700;
@@ -15,7 +17,7 @@
     color: #a75037;
 }
 
-/* ////////////////// fun fact ////////////////// */
+/* ////////////////// fun fact table ////////////////// */
 
 .fun-facts-table {
   width: 100%;

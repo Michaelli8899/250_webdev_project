@@ -24,8 +24,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
     <body>
+        <!-- skip to main content -->
         <a class="skip-link" href="#main-content">Skip to main content</a>
         <header>
+          <!-- nav bar -->
             <nav class = 'navbar'>
                 <a href="../index.html">
                     <img class = 'logo' src="../static/images/logo.png" alt="Dequesned Incline logo" width = '123' height = '88'>
@@ -44,6 +46,7 @@
                     </div>
                     </div>
                 </div>
+                <!-- hideen reveal on hover -->
                 <div id = 'visit-hidden-nav' class = 'hide'>
                     <ul>
                         <li><a href="../views/visit/tickets.html">Tickets</a></li>
@@ -52,8 +55,8 @@
                     </ul>
                 </div>
             </nav>
-
-            <div class="hero" id = 'mailing-hero'>
+            <!-- landing image -->
+            <div class="hero" id = 'mailing-hero' role="img" aria-label="Acrisure Stadium viewed from the Duquesne Incline">
                 <div class="hero-content">
                   <h1 class="hero-title inria-serif-bold">JOIN OUR MAILING LIST</h1>
                   <p class="hero-subtitle inria-serif-regular">
@@ -64,31 +67,36 @@
             
             
         </header>
-
+        <!-- main content -->
         <div class = "main" id = 'main-content'>
             <div class = 'section-background white-background'>
-              <h2 class = 'section-title' tabindex = '0'>Join Our Mailing List</h2>
+              <h2 class = 'section-title'  >Join Our Mailing List</h2>
               <div class = 'content content-left'>
                 <p>Sign up to receive our newsletter and stay up to date on the latest news and events at the Duquesne Incline.</p>
               </div>
               
+              <!-- success message -->
               <div class = 'content'>
+                <p class = 'hide success-message'>
+                  Thank you for joining our mailing list. You're all set to receive the latest updates, news, and exclusive offers from Duquesne Incline. Check your email for a confirmation message shortly.
+                </p>
+                <!-- form -->
                 <form class="mailing-list-form">
 
                   <label for="name">Name:</label>
-                  <input type="text" id="name" name="name" required placeholder = 'e.g. John Doe'>
+                  <input type="text" id="name" name="name" required placeholder = 'e.g. John Doe' minlength="2" maxlength="50">
                   <span class="error-message" id="nameError"></span>
 
                   <label for="email">Email:</label>
-                  <input type="email" id="email" name="email" required placeholder = 'e.g. 12345@mail.com'>
+                  <input type="email" id="email" name="email" required placeholder = 'e.g. 12345@mail.com' minlength="5" maxlength="254">
                   <span class="error-message" id="emailError"></span>
 
                   <label for="phone">Mobile Phone Number (optional):</label>
-                  <input type="tel" id="phone" name="phone" placeholder = 'e.g. 1234567890 or 123-456-7890 (optional)' pattern="^\d{3}(-)?\d{3}(-)?\d{4}$">
+                  <input type="tel" id="phone" name="phone" placeholder = 'e.g. 1234567890 (optional)' pattern="^\d{10}$" maxlength="10">
                   <span class="error-message" id="phoneError"></span>
 
                   <label for="zip">Zip Code (optional):</label>
-                  <input type="text" id="zip" name="zip" placeholder = 'e.g. 12345 or 12345-7890 (optional)' pattern="^\d{5}(-\d{4})?$">
+                  <input type="text" id="zip" name="zip" placeholder = 'e.g. 12345 (optional)' pattern="^\d{5}$" maxlength="5">
                   <span class="error-message" id="zipError"></span>
 
                   <div class="checkbox-group">
@@ -107,12 +115,23 @@
         
         <footer class="site-footer">
           <div class="footer-top">
-            <!-- Logo -->
+            <!-- logo -->
             <div class="footer-logo">
               <img class = 'logo' src="../static/images/logo.png" alt="Dequesned Incline logo" width = '123' height = '88'>
             </div>
+            <!-- social media -->
+            <ul class="footer-social">
+              <li><a target = '_blank' href="https://www.facebook.com/TheDuquesneIncline/photos/"><img src="../static/images/socialmedia/facebook.png" alt="Facebook"></a></li>
+              <li><a target = '_blank' href="https://x.com/duquesneincline"><img src="../static/images/socialmedia/x.png" alt="X"></a></li>
+              <li><a target = '_blank' href="https://www.instagram.com/explore/locations/289145085/duquesne-incline-pittsburgh/?hl=en"><img src="../static/images/socialmedia/ins.png" alt="Instagram"></a></li>
+              <li><a target = '_blank' href="https://www.yelp.com/biz/duquesne-incline-pittsburgh"><img src="../static/images/socialmedia/yelp.png" alt="Yelp"></a></li>
+              <li><a target = '_blank' href="https://www.viator.com/Pittsburgh-attractions/Duquesne-Incline/d22639-a21677"><img src="../static/images/socialmedia/viator.png" alt="Viator"></a></li>
+              <li><a target = '_blank' href="https://www.visitpittsburgh.com/directory/duquesne-incline/"><img src="../static/images/socialmedia/visitpittsburgh.png" alt="Visit Pittsburgh"></a></li>
+              <li><a target = '_blank' href="https://en.wikipedia.org/wiki/Duquesne_Incline"><img src="../static/images/socialmedia/wikipedia.png" alt="Wikipedia"></a></li>
+            </ul>
+
         
-            <!-- Navigation Links -->
+            <!-- nav links -->
             <ul class="footer-nav">
               <li><a href="../index.html">Home</a></li>
               <li><a href="./about.html">About</a></li>
@@ -129,19 +148,17 @@
             <p>Mailing: 1220 Grandview Ave. Pittsburgh, PA 15211</p>
           </div>
         
-          <!-- Social Icons & Copyright -->
+          <!-- social media & copyright -->
           <div class="footer-bottom">
-            <ul class="footer-social">
-              <li><a href="https://www.facebook.com/TheDuquesneIncline/photos/"><img src="../static/images/socialmedia/facebook.png" alt="Facebook"></a></li>
-              <li><a href="https://x.com/duquesneincline"><img src="../static/images/socialmedia/x.png" alt="X"></a></li>
-              <li><a href="https://www.instagram.com/explore/locations/289145085/duquesne-incline-pittsburgh/?hl=en"><img src="../static/images/socialmedia/ins.png" alt="Instagram"></a></li>
-            </ul>
         
             <p class="copyright">
               &copy; 2025. All Rights Reserved.
             </p>
+            <p>
+              Photo credits to Expedia, Duquesne Incline, butlertransitauthority, transitapp, loomis
+            </p>
           </div>
-      </footer>
+        </footer>
         
     </body>
 </html>

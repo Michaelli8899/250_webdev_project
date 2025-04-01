@@ -23,8 +23,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
     <body>
+        <!-- skip to main content -->
         <a class="skip-link" href="#main-content">Skip to main content</a>
         <header>
+            <!-- nav bar -->
             <nav class = 'navbar'>
                 <a href="../index.html">
                     <img class = 'logo' src="../static/images/logo.png" alt="Dequesned Incline logo" width = '123' height = '88'>
@@ -43,6 +45,7 @@
                     </div>
                     </div>
                 </div>
+                <!-- hidden reveal after hover -->
                 <div id = 'visit-hidden-nav' class = 'hide'>
                     <ul>
                         <li><a href="../views/visit/tickets.html">Tickets</a></li>
@@ -51,8 +54,8 @@
                     </ul>
                 </div>
             </nav>
-
-            <div class="hero" id = 'giftshop-hero'>
+            <!-- landing image -->
+            <div class="hero" id = 'giftshop-hero' role="img" aria-label="interior of the incline's gift shop">
                 <div class="hero-content">
                   <h1 class="hero-title inria-serif-bold">INCLINE GIFT SHOP</h1>
                   <p class="hero-subtitle inria-serif-regular">
@@ -65,29 +68,31 @@
         </header>
 
         <div class = "main" id = 'main-content'>
+          <!-- gift shop image -->
           <div class = 'section-background white-background'>
-              <h2 class = 'section-title' tabindex = '0'>Checkout our gift shop</h2>
+              <h2 class = 'section-title'  >Checkout our gift shop</h2>
               <div class = 'content content-left'>
                 <p>We offer many one of a kind items that were custom made for the Incline.</p>
               </div>
               
               <div class = 'content'>                
-                <img class = 'giftshop-img' src="../static/images/giftshop/giftshop1.png" alt="general giftshop interior">
+                <img src="../static/images/giftshop/giftshop1.png" alt="general giftshop interior">
               </div>
           </div>
+          <!-- gift shop items -->
           <div class = 'section-background yellow-background'>
-            <h2 class = 'section-title' tabindex = '0'>Our items</h2>
+            <h2 class = 'section-title'  >Our items</h2>
             <div class="content flex-2">
             
               <div>
-                <img class = 'giftshop-img' tabindex = '0' src="../static/images/giftshop/1.png" alt="Shot Glasses with incline information">
+                <img src="../static/images/giftshop/1.png" alt="Shot Glasses with incline information">
                 <h3 class="inria-serif-bold section-sub-title">SHOT GLASSES</h3>
                 <p>Many shot glasses are for sale, including a slanted one!</p>
               </div>
               
               <div>
                 
-                <img class = 'giftshop-img' tabindex = '0' src="../static/images/giftshop/2.png" alt="Handmade Incline Wooden Ornament">
+                <img src="../static/images/giftshop/2.png" alt="Handmade Incline Wooden Ornament">
                 <h3 class="inria-serif-bold section-sub-title">HANDMADE INCLINE WOODEN ORNAMENT</h3>
                 <p>This ornament is a big seller and is only available here.</p>
               </div>
@@ -99,12 +104,23 @@
         
         <footer class="site-footer">
           <div class="footer-top">
-            <!-- Logo -->
+            <!-- logo -->
             <div class="footer-logo">
               <img class = 'logo' src="../static/images/logo.png" alt="Dequesned Incline logo" width = '123' height = '88'>
             </div>
+            <!-- social media -->
+            <ul class="footer-social">
+              <li><a target = '_blank' href="https://www.facebook.com/TheDuquesneIncline/photos/"><img src="../static/images/socialmedia/facebook.png" alt="Facebook"></a></li>
+              <li><a target = '_blank' href="https://x.com/duquesneincline"><img src="../static/images/socialmedia/x.png" alt="X"></a></li>
+              <li><a target = '_blank' href="https://www.instagram.com/explore/locations/289145085/duquesne-incline-pittsburgh/?hl=en"><img src="../static/images/socialmedia/ins.png" alt="Instagram"></a></li>
+              <li><a target = '_blank' href="https://www.yelp.com/biz/duquesne-incline-pittsburgh"><img src="../static/images/socialmedia/yelp.png" alt="Yelp"></a></li>
+              <li><a target = '_blank' href="https://www.viator.com/Pittsburgh-attractions/Duquesne-Incline/d22639-a21677"><img src="../static/images/socialmedia/viator.png" alt="Viator"></a></li>
+              <li><a target = '_blank' href="https://www.visitpittsburgh.com/directory/duquesne-incline/"><img src="../static/images/socialmedia/visitpittsburgh.png" alt="Visit Pittsburgh"></a></li>
+              <li><a target = '_blank' href="https://en.wikipedia.org/wiki/Duquesne_Incline"><img src="../static/images/socialmedia/wikipedia.png" alt="Wikipedia"></a></li>
+            </ul>
+
         
-            <!-- Navigation Links -->
+            <!-- nav links -->
             <ul class="footer-nav">
               <li><a href="../index.html">Home</a></li>
               <li><a href="./about.html">About</a></li>
@@ -121,19 +137,17 @@
             <p>Mailing: 1220 Grandview Ave. Pittsburgh, PA 15211</p>
           </div>
         
-          <!-- Social Icons & Copyright -->
+          <!-- social media & copyright -->
           <div class="footer-bottom">
-            <ul class="footer-social">
-              <li><a href="https://www.facebook.com/TheDuquesneIncline/photos/"><img src="../static/images/socialmedia/facebook.png" alt="Facebook"></a></li>
-              <li><a href="https://x.com/duquesneincline"><img src="../static/images/socialmedia/x.png" alt="X"></a></li>
-              <li><a href="https://www.instagram.com/explore/locations/289145085/duquesne-incline-pittsburgh/?hl=en"><img src="../static/images/socialmedia/ins.png" alt="Instagram"></a></li>
-            </ul>
         
             <p class="copyright">
               &copy; 2025. All Rights Reserved.
             </p>
+            <p>
+              Photo credits to Expedia, Duquesne Incline, butlertransitauthority, transitapp, loomis
+            </p>
           </div>
-      </footer>
+        </footer>
         
     </body>
 </html>

@@ -25,7 +25,9 @@
 </head>
     <body>
       <header>
+        <!-- skip to main content -->
         <a class="skip-link" href="#main-content">Skip to main content</a>
+        <!-- nav bar -->
         <nav class = 'navbar'>
                 <a href="../index.html">
                     <img class = 'logo' src="../static/images/logo.png" alt="Dequesned Incline logo" width = '123' height = '88'>
@@ -44,6 +46,7 @@
                     </div>
                     </div>
                 </div>
+                <!-- hidden reveal after hover -->
                 <div id = 'visit-hidden-nav' class = 'hide'>
                     <ul>
                         <li><a href="../views/visit/tickets.html">Tickets</a></li>
@@ -52,8 +55,8 @@
                     </ul>
                 </div>
         </nav>
-
-        <div class="hero" id = 'about-hero'>
+        <!-- landing image -->
+        <div class="hero" id = 'about-hero' role="img" aria-label="night time view of the incline with the city in the background">
                 <div class="hero-content">
                   <h1 class="hero-title inria-serif-bold">ABOUT THE DUQUESNE INCLINE</h1>
                   <p class="hero-subtitle inria-serif-regular">
@@ -66,10 +69,12 @@
           
             
         </header>
-
+        <!-- main content -->
         <div class = "main" id = 'main-content'>
+            <!-- history -->
             <div id = 'about-history' class = "section-background white-background">
-                <h2 class = 'section-title' tabindex = '0'>EARLY HISTORY</h2>
+                <h2 class = 'section-title'  >EARLY HISTORY</h2>
+                <!-- read-more interaction -->
                 <div class = ' content '>
                   
                   <p id = 'short-content'>
@@ -82,7 +87,7 @@
                     beginning to be converted from farmland to homesites. This            
                     pleasantly-situated acreage was an excellent area to absorb 
                     some of the expanding population of the city, but the problem 
-                    of easy access was still to be solved. <span id = 'history-read-more' tabindex = '0'>Read More</span>
+                    of easy access was still to be solved. <span id = 'history-read-more'  >Read More</span>
                   </p>
                   <p id = 'long-content' class = 'hide'>
                     The incline was built in 1877 by Samuel Diescher, who had 
@@ -112,19 +117,20 @@
                     From 1964 until the present, the Incline has been operated by 
                     the Society for the Preservation of The Duquesne Heights Incline; 
                     it has been owned by the Port Authority of Allegheny County.
-                    <span id = 'history-read-less' tabindex = '0'>Read Less</span>
+                    <span id = 'history-read-less'  >Read Less</span>
                   </p>
                 </div>
-                <h2 class = 'section-sub-title' tabindex = '0'> WATCH THIS INFORMATIONAL VIDEO ON THE INCLINE</h2>
-                <div class = 'content '>      
-                  <iframe width="1000" 
-                          height="600" 
-                          src="https://www.youtube.com/embed/ve3KMUIlSGk?si=33IpiPVmXfayPX7f" 
-                          title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h2 class = 'section-sub-title'  > WATCH THIS INFORMATIONAL VIDEO ON THE INCLINE</h2>
+                <div class = 'content '>   
+                    <!-- youtube video -->
+                    <iframe width="1000" 
+                            height="600" 
+                            src="https://www.youtube.com/embed/ve3KMUIlSGk?si=33IpiPVmXfayPX7f" 
+                            title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
             <div class = 'section-background yellow-background'>
-              <h2 class = 'section-title' tabindex = '0'>
+              <h2 class = 'section-title'  >
                 The Society for the Preservation of the Duquesne Heights Incline
               </h2>
               <div class = ' content '>
@@ -143,11 +149,11 @@
             </div>
 
             <div class = 'section-background white-background'>
-              <h2 class = 'section-title' tabindex = '0'>
+              <h2 class = 'section-title'  >
                 Fun Facts
               </h2>
+              <!-- fun facts table -->
               <div class="content">
-                  <!-- Simple table with inline styling for lines -->
                   <table class="fun-facts-table">
                     <tbody>
                       <tr>
@@ -186,12 +192,23 @@
         
         <footer class="site-footer">
           <div class="footer-top">
-            <!-- Logo -->
+            <!-- logo -->
             <div class="footer-logo">
               <img class = 'logo' src="../static/images/logo.png" alt="Dequesned Incline logo" width = '123' height = '88'>
             </div>
+            <!-- social media -->
+            <ul class="footer-social">
+              <li><a target = '_blank' href="https://www.facebook.com/TheDuquesneIncline/photos/"><img src="../static/images/socialmedia/facebook.png" alt="Facebook"></a></li>
+              <li><a target = '_blank' href="https://x.com/duquesneincline"><img src="../static/images/socialmedia/x.png" alt="X"></a></li>
+              <li><a target = '_blank' href="https://www.instagram.com/explore/locations/289145085/duquesne-incline-pittsburgh/?hl=en"><img src="../static/images/socialmedia/ins.png" alt="Instagram"></a></li>
+              <li><a target = '_blank' href="https://www.yelp.com/biz/duquesne-incline-pittsburgh"><img src="../static/images/socialmedia/yelp.png" alt="Yelp"></a></li>
+              <li><a target = '_blank' href="https://www.viator.com/Pittsburgh-attractions/Duquesne-Incline/d22639-a21677"><img src="../static/images/socialmedia/viator.png" alt="Viator"></a></li>
+              <li><a target = '_blank' href="https://www.visitpittsburgh.com/directory/duquesne-incline/"><img src="../static/images/socialmedia/visitpittsburgh.png" alt="Visit Pittsburgh"></a></li>
+              <li><a target = '_blank' href="https://en.wikipedia.org/wiki/Duquesne_Incline"><img src="../static/images/socialmedia/wikipedia.png" alt="Wikipedia"></a></li>
+            </ul>
+
         
-            <!-- Navigation Links -->
+            <!-- nav links -->
             <ul class="footer-nav">
               <li><a href="../index.html">Home</a></li>
               <li><a href="./about.html">About</a></li>
@@ -208,19 +225,17 @@
             <p>Mailing: 1220 Grandview Ave. Pittsburgh, PA 15211</p>
           </div>
         
-          <!-- Social Icons & Copyright -->
+          <!-- social media & copyright -->
           <div class="footer-bottom">
-            <ul class="footer-social">
-              <li><a href="https://www.facebook.com/TheDuquesneIncline/photos/"><img src="../static/images/socialmedia/facebook.png" alt="Facebook"></a></li>
-              <li><a href="https://x.com/duquesneincline"><img src="../static/images/socialmedia/x.png" alt="X"></a></li>
-              <li><a href="https://www.instagram.com/explore/locations/289145085/duquesne-incline-pittsburgh/?hl=en"><img src="../static/images/socialmedia/ins.png" alt="Instagram"></a></li>
-            </ul>
         
             <p class="copyright">
               &copy; 2025. All Rights Reserved.
             </p>
+            <p>
+              Photo credits to Expedia, Duquesne Incline, butlertransitauthority, transitapp, loomis
+            </p>
           </div>
-      </footer>
+        </footer>
         
     </body>
 </html>

@@ -1,17 +1,15 @@
-/* Basic table styling for fare tables */
+/* fare tables */
 .fare-table {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
 }
 
-/* Table header cells */
+/* table header cells */
 .fare-table th {
-    background-color: #e0e0e0; /* Light gray or your choice */
+    background-color: #e0e0e0;
     padding: 20px;
-    /* ineria serif font */
     color: #353851;
-
     font-family: "Inria Serif";
     font-size: 36px;
     font-style: normal;
@@ -20,7 +18,7 @@
     text-transform: uppercase;
 }
 
-/* Table body cells */
+/* table body cells */
 .fare-table td {
     border: 1px solid #ccc; 
     padding: 0.75rem;
@@ -32,7 +30,41 @@
     line-height: 130%; /* 31.2px */
 }
 
-/* Optional: alternate row background or any additional styling */
+/* alternate row background or any additional styling */
 .fare-table tbody tr:nth-child(even) {
   background-color: #f9f9f9;
+}
+
+/* important message background */
+.important-message {
+    background-color: #d7daf8;
+    color: #1c1d72;
+    border-radius: 30px;
+    padding: 30px 40px;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    height: 100%;
+}
+
+/* card to each payment method */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto; 
+    max-width: 1272px;
+    padding: 30px 40px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    gap: 20px;
+}
+
+/* images in the cards */
+.ticket-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }

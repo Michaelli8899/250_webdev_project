@@ -23,8 +23,6 @@
       (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
         key: "AIzaSyDZGhoFJfet3vFvfOUlSZ4LbnGxusJ3eYk",
         v: "weekly",
-        // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
-        // Add other bootstrap parameters as needed, using camel case.
       });
     </script>
     <!-- google font  -->
@@ -33,8 +31,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
     <body>
+        <!-- skip to main content -->
         <a class="skip-link" href="#main-content">Skip to main content</a>
         <header>
+          <!-- nav bar -->
           <nav class = 'navbar'>
             <a href="../../index.html">
                 <img class = 'logo' src="../../static/images/logo.png" alt="Dequesned Incline logo" width = '123' height = '88'>
@@ -53,6 +53,7 @@
                 </div>
                 </div>
             </div>
+            <!-- hidden reveal after hover -->
             <div id = 'visit-hidden-nav' class = 'hide'>
                 <ul>
                     <li><a href="../../views/visit/tickets.html">Tickets</a></li>
@@ -62,7 +63,8 @@
             </div>
           </nav>
 
-            <div class="hero" id = 'directions-hero'>
+          <!-- landing image -->
+            <div class="hero" id = 'directions-hero' role = 'img' aria-label="tracks of the incline trolly">
                 <div class="hero-content">
                   <h1 class="hero-title inria-serif-bold">Getting to the Incline</h1>
                   <p class="hero-subtitle inria-serif-regular">
@@ -73,10 +75,10 @@
             
             
         </header>
-
+        <!-- main content -->
         <div class = "main" id = 'main-content'>
           <div class = 'section-background white-background'>
-            <h2 class = 'section-title' tabindex = '0'> Address Information</h2>
+            <h2 class = 'section-title'  > Address Information</h2>
             <div class = 'content content-left'>
               <p>
                 1197 West Carson St. <br>
@@ -86,12 +88,14 @@
           </div>  
 
           <div class = 'section-background yellow-background'>
-            <h2 class = 'section-title' tabindex = '0'>The incline is here!</h2>
+            <h2 class = 'section-title'  >The incline is here!</h2>
             <div class = 'content'>
+              <!-- street view -->
               <div id="map"></div>
             </div>
-            <h2 class = 'section-title' tabindex = '0'>check our your position relative to the incline</h2>
+            <h2 class = 'section-title'  >check our your position relative to the incline</h2>
             <div class = 'content'>
+              <!-- map with visitor and incline location -->
               <div id="map2"></div>
             </div>
           </div>
@@ -101,12 +105,22 @@
         
         <footer class="site-footer">
           <div class="footer-top">
-            <!-- Logo -->
+            <!-- logo -->
             <div class="footer-logo">
               <img class = 'logo' src="../../static/images/logo.png" alt="Dequesned Incline logo" width = '123' height = '88'>
             </div>
+            <!-- social media -->
+            <ul class="footer-social">
+              <li><a target = '_blank' href="https://www.facebook.com/TheDuquesneIncline/photos/"><img src="../../static/images/socialmedia/facebook.png" alt="Facebook"></a></li>
+              <li><a target = '_blank' href="https://x.com/duquesneincline"><img src="../../static/images/socialmedia/x.png" alt="X"></a></li>
+              <li><a target = '_blank' href="https://www.instagram.com/explore/locations/289145085/duquesne-incline-pittsburgh/?hl=en"><img src="../../static/images/socialmedia/ins.png" alt="Instagram"></a></li>
+              <li><a target = '_blank' href="https://www.yelp.com/biz/duquesne-incline-pittsburgh"><img src="../../static/images/socialmedia/yelp.png" alt="Yelp"></a></li>
+              <li><a target = '_blank' href="https://www.viator.com/Pittsburgh-attractions/Duquesne-Incline/d22639-a21677"><img src="../../static/images/socialmedia/viator.png" alt="Viator"></a></li>
+              <li><a target = '_blank' href="https://www.visitpittsburgh.com/directory/duquesne-incline/"><img src="../../static/images/socialmedia/visitpittsburgh.png" alt="Visit Pittsburgh"></a></li>
+              <li><a target = '_blank' href="https://en.wikipedia.org/wiki/Duquesne_Incline"><img src="../../static/images/socialmedia/wikipedia.png" alt="Wikipedia"></a></li>
+            </ul>
         
-            <!-- Navigation Links -->
+            <!-- nav links -->
             <ul class="footer-nav">
               <li><a href="../../index.html">Home</a></li>
               <li><a href="../about.html">About</a></li>
@@ -123,19 +137,17 @@
             <p>Mailing: 1220 Grandview Ave. Pittsburgh, PA 15211</p>
           </div>
         
-          <!-- Social Icons & Copyright -->
+          <!-- copyright -->
           <div class="footer-bottom">
-            <ul class="footer-social">
-              <li><a href="https://www.facebook.com/TheDuquesneIncline/photos/"><img src="../../static/images/socialmedia/facebook.png" alt="Facebook"></a></li>
-              <li><a href="https://x.com/duquesneincline"><img src="../../static/images/socialmedia/x.png" alt="X"></a></li>
-              <li><a href="https://www.instagram.com/explore/locations/289145085/duquesne-incline-pittsburgh/?hl=en"><img src="../../static/images/socialmedia/ins.png" alt="Instagram"></a></li>
-            </ul>
         
             <p class="copyright">
               &copy; 2025. All Rights Reserved.
             </p>
+            <p>
+              Photo credits to Expedia, Duquesne Incline, butlertransitauthority, transitapp, loomis
+            </p>
           </div>
-      </footer>
+        </footer>
         
     </body>
 </html>

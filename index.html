@@ -24,12 +24,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
     <body>
+        <!-- skip to main content -->
         <a class="skip-link" href="#main-content">Skip to main content</a>
         <header>
+            <!-- nav bar -->
             <nav class = 'navbar'>
+                <!-- logo -->
                 <a href="./index.html">
+                  <!-- logo from started resources -->
                     <img class = 'logo' src="./static/images/logo.png" alt="Dequesned Incline logo" width = '123' height = '88'>
                 </a>
+                <!-- rest of the links -->
                 <div class = 'full-container dark-blue'>
                     <div class = 'all-nav-links'>
                         <ul class="nav-links">
@@ -44,6 +49,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- nav bar hidden and reveal after hover -->
                 <div id = 'visit-hidden-nav' class = 'hide'>
                     <ul>
                         <li><a href="./views/visit/tickets.html">Tickets</a></li>
@@ -52,27 +58,27 @@
                     </ul>
                 </div>
             </nav>
-
+            <!-- carousel sliding images -->
             <div class="carousel-container">
-                <!-- Background sliding images -->
+                <!-- sliding images -->
                 <div class="carousel-inner">
-                  <div class="carousel-slide" id="home-hero1"></div>
-                  <div class="carousel-slide" id="home-hero2"></div>
-                  <div class="carousel-slide" id="home-hero3"></div>
+                  <div class="carousel-slide" id="home-hero1" role = 'img' aria-label = 'downtown pittsburgh viewed from the incline'></div>
+                  <div class="carousel-slide" id="home-hero2" role = 'img' aria-label = 'the trolley going up the incline with the incline logo'></div>
+                  <div class="carousel-slide" id="home-hero3" role = 'img' aria-label = 'downtown pittsburgh'></div>
                 </div>
             
-                <!-- Dot indicators -->
+                <!-- dot indicators -->
                 <div class="carousel-indicators">
                   <div class="dot active"></div>
                   <div class="dot"></div>
                   <div class="dot"></div>
                 </div>
             
-                <!-- Left and Right Arrows -->
+                <!-- arrows -->
                 <div class="carousel-arrow carousel-arrow-left">&#10094;</div>
                 <div class="carousel-arrow carousel-arrow-right">&#10095;</div>
             
-                <!-- Static content overlay -->
+                <!-- title and sub title -->
                 <div class="hero-content">
                   <h1 class="hero-title inria-serif-bold">THE DUQUESNE INCLINE</h1>
                   <p class="hero-subtitle inria-serif-regular">
@@ -87,7 +93,7 @@
             
             
         </header>
-
+        <!-- main content -->
         <div class = "main" id = 'main-content'>
             <div class = "section-background white-background">
             <p class="info-text">
@@ -97,10 +103,10 @@ And Visitors With Its Original, Elegant, Wooden Cable Cars.
             </p>
             
             <div class="content">
-                <!-- Ticketing Card -->
+                <!-- ticketing card -->
                 <div class="info-card yellow-background  padding-30px">
                     <div class="info-card-content">
-                        <h2 tabindex = '0'>Ticketing</h2>
+                        <h2  >Ticketing</h2>
                         <p>
                             No Reservations or Advance Tickets<br><br>
                             Cash fares as well as Port Authority connect cards are accepted as payment.
@@ -109,24 +115,25 @@ And Visitors With Its Original, Elegant, Wooden Cable Cars.
                   <a href="./views/visit/tickets.html" class="card-btn stretch">Check out Fares</a>
                 </div>
             
-                <!-- Address Card -->
+                <!-- address card -->
                 <div class="info-card yellow-background  padding-30px">
                     <div class="info-card-content">
-                        <h2 tabindex = '0'>Address</h2>
+                        <h2  >Address</h2>
                         <p>1197 West Carson Street<br>Pittsburgh, PA 15219</p>
                     </div>
                   <a href="./views/visit/directions.html" class="card-btn stretch">Get Directions</a>
                 </div>
             
-                <!-- Hours Card -->
+                <!-- hours card -->
                 <div class="info-card yellow-background padding-30px">
                     <div class="info-card-content">
-                        <h2 tabindex = '0'>Hours</h2>
+                        <h2  >Hours</h2>
                         <p>Every day of the year:<br>6:30 a.m. to 12:30 a.m.</p>
                     </div>
                 </div>
             </div>
             </div>
+            <!-- quote -->
             <div class = "section-background yellow-background">
                     <div class="quote-content">
                     <p class="quote-text inria-serif-bold">
@@ -136,88 +143,106 @@ And Visitors With Its Original, Elegant, Wooden Cable Cars.
                     </div>
 
             </div>
+            <!-- tour cards -->
             <div class = "section-background white-background">
                 <div id="tour-section">
-                    <h2 class = "section-title" tabindex = '0'>Schedule Your Tour</h2>
+                    <h2 class = "section-title"  >Schedule Your Tour</h2>
                 
                     <div class="content">
-                    <!-- City Tours Card -->
-                    <div class="image-card city-tours">
+                    <!-- city tours card -->
+                    <div class="image-card city-tours" role = 'img' aria-label = 'downtown pittsburgh viewed from the incline'>
                         
                         <h3>CITY TOURS</h3>
-                        <a href="./views/visit/thingstodo.html" class="card-btn">Read More</a>
+                        <a href="./views/visit/thingstodo.html#thingstodo-single" class="card-btn">Read More</a>
                         
                     </div>
                 
-                    <!-- Group Tours Card -->
-                    <div class="image-card group-tours">
+                    <!-- groups tours card -->
+                    <div class="image-card group-tours" role = 'img' aria-label = 'a group of people at the incline'>
                         
                         <h3>GROUP TOURS</h3>
-                        <a href="./views/visit/thingstodo.html" class="card-btn">Read More</a>
+                        <a href="./views/visit/thingstodo.html#thingstodo-group" class="card-btn">Read More</a>
                         
                     </div>
                     </div>
                 </div>
 
             </div>
+            <!-- new stories -->
             <div class = "section-background yellow-background">
-                <h2 class="section-title" tabindex = '0'>RELATED STORIES</h2>
+                <h2 class="section-title"  >RELATED STORIES</h2>
                 <div class="content">
-                    <!-- Card 1 -->
-                    <div class="info-card white-background padding-30px">
-                    <img src="./static/images/articles/1.png" alt="Mount Washington">
-                    <div class="info-card-content">
+                    <!-- new card 1 -->
+                    <div class="info-card">
+                      <!-- Reference  "https://www.wnep.com/article/entertainment/places/on-the-pa-road/pittsburgh-incline-on-the-pa-road/523-357442ad-fa65-4c42-bfb9-d0fb9aa910be"-->
+                      <a target="_blank" href="https://www.discovertheburgh.com/living-in-mount-washington/">
+                        <img src="./static/images/articles/1.png" alt="Pittsburgh Incline on the PA Road">
+                      </a>
+                      <div class="info-card-content">
                         <h3>5 Reasons To Love Living In Mount Washington</h3>
                         <p>02/25/2025</p>
                         <p>
                         Many Pittsburgh residents dream of living in Mount Washington.
                         This neighborhood is beloved for its breathtaking skyline views...
                         </p>
-                        <a target="_blank" href="https://www.discovertheburgh.com/living-in-mount-washington/" class="card-btn">Details</a>
-                    </div>
+                      </div>
                     </div>
 
-                    <!-- Card 2 -->
-                    <div class="info-card white-background padding-30px">
-                    <img src="./static/images/articles/2.png" alt="Pittsburgh Incline on the PA Road">
-                    <div class="info-card-content">
+                    <!-- news card 2 -->
+                    <div class="info-card">
+                      <!-- Reference  "https://www.wnep.com/article/entertainment/places/on-the-pa-road/pittsburgh-incline-on-the-pa-road/523-357442ad-fa65-4c42-bfb9-d0fb9aa910be"-->
+                      <a target="_blank" href="https://www.wnep.com/article/entertainment/places/on-the-pa-road/pittsburgh-incline-on-the-pa-road/523-357442ad-fa65-4c42-bfb9-d0fb9aa910be">
+                        <img src="./static/images/articles/2.png" alt="Pittsburgh Incline on the PA Road">
+                      </a>
+                      <div class="info-card-content">
                         <h3>Pittsburgh Incline | On The PA Road</h3>
                         <p>10/23/2024</p>
                         <p>
                         In Pittsburgh, this stop on The Pennsylvania Road is just as much
                         a part of the public fabric as any other local landmark...
                         </p>
-                        <a target="_blank" href="https://www.wnep.com/article/entertainment/places/on-the-pa-road/pittsburgh-incline-on-the-pa-road/523-357442ad-fa65-4c42-bfb9-d0fb9aa910be" class="card-btn">Details</a>
+                      </div>
                     </div>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div class="info-card white-background padding-30px">
-                    <img src="./static/images/articles/3.png" alt="Historic Duquesne Incline">
-                    <div class="info-card-content">
+                    <!-- news card 3 -->
+                    <div class="info-card">
+                      <!-- Reference "https://www.discovertheburgh.com/duquesne-incline/"-->
+                      <a target="_blank" href="https://www.discovertheburgh.com/duquesne-incline/">
+                        <img src="./static/images/articles/3.png" alt="Historic Duquesne Incline">
+                      </a>
+                      <div class="info-card-content">
                         <h3>Take A Ride On Pittsburgh’s Historic Duquesne Incline</h3>
                         <p>04/08/2025</p>
                         <p>
                         At one point in time, Pittsburgh was home to nearly twenty active
                         funicular railways. Today, the Duquesne Incline remains a...
                         </p>
-                        <a target="_blank" href="https://www.discovertheburgh.com/duquesne-incline/" class="card-btn">Details</a>
-                    </div>
+                      
+                      </div>
                     </div>
                 </div>
             </div>
             
 
         </div>
-        
+        <!-- footer -->
         <footer class="site-footer">
             <div class="footer-top">
-              <!-- Logo -->
+              <!-- logo -->
               <div class="footer-logo">
                 <img class = 'logo' src="./static/images/logo.png" alt="Dequesned Incline logo" width = '123' height = '88'>
               </div>
+
+              <ul class="footer-social">
+                <li><a href="https://www.facebook.com/TheDuquesneIncline/photos/"><img src="./static/images/socialmedia/facebook.png" alt="Facebook"></a></li>
+                <li><a href="https://x.com/duquesneincline"><img src="./static/images/socialmedia/x.png" alt="X"></a></li>
+                <li><a href="https://www.instagram.com/explore/locations/289145085/duquesne-incline-pittsburgh/?hl=en"><img src="./static/images/socialmedia/ins.png" alt="Instagram"></a></li>
+                <li><a target = '_blank' href="https://www.yelp.com/biz/duquesne-incline-pittsburgh"><img src="./static/images/socialmedia/yelp.png" alt="Yelp"></a></li>
+                <li><a target = '_blank' href="https://www.viator.com/Pittsburgh-attractions/Duquesne-Incline/d22639-a21677"><img src="./static/images/socialmedia/viator.png" alt="Viator"></a></li>
+                <li><a target = '_blank' href="https://www.visitpittsburgh.com/directory/duquesne-incline/"><img src="./static/images/socialmedia/visitpittsburgh.png" alt="Visit Pittsburgh"></a></li>
+                <li><a target = '_blank' href="https://en.wikipedia.org/wiki/Duquesne_Incline"><img src="./static/images/socialmedia/wikipedia.png" alt="Wikipedia"></a></li>
+              </ul>
           
-              <!-- Navigation Links -->
+              <!-- nav links -->
               <ul class="footer-nav">
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./views/about.html">About</a></li>
@@ -234,16 +259,15 @@ And Visitors With Its Original, Elegant, Wooden Cable Cars.
               <p>Mailing: 1220 Grandview Ave. Pittsburgh, PA 15211</p>
             </div>
           
-            <!-- Social Icons & Copyright -->
+            <!-- social media icons & copy right & credit -->
             <div class="footer-bottom">
-              <ul class="footer-social">
-                <li><a href="https://www.facebook.com/TheDuquesneIncline/photos/"><img src="static/images/socialmedia/facebook.png" alt="Facebook"></a></li>
-                <li><a href="https://x.com/duquesneincline"><img src="static/images/socialmedia/x.png" alt="X"></a></li>
-                <li><a href="https://www.instagram.com/explore/locations/289145085/duquesne-incline-pittsburgh/?hl=en"><img src="static/images/socialmedia/ins.png" alt="Instagram"></a></li>
-              </ul>
           
               <p class="copyright">
                 &copy; 2025. All Rights Reserved.
+              </p>
+
+              <p>
+                Photo credits to Expedia, Duquesne Incline, butlertransitauthority, transitapp, loomis
               </p>
             </div>
         </footer>

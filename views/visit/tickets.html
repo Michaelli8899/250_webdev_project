@@ -23,8 +23,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
     <body>
+        <!-- skip to main content -->
         <a class="skip-link" href="#main-content">Skip to main content</a>
         <header>
+          <!-- nav bar -->
           <nav class = 'navbar'>
             <a href="../../index.html">
                 <img class = 'logo' src="../../static/images/logo.png" alt="Dequesned Incline logo" width = '123' height = '88'>
@@ -43,6 +45,7 @@
                 </div>
                 </div>
             </div>
+            <!-- hidden reveal after hover -->
             <div id = 'visit-hidden-nav' class = 'hide'>
                 <ul>
                     <li><a href="../../views/visit/tickets.html">Tickets</a></li>
@@ -51,28 +54,52 @@
                 </ul>
             </div>
           </nav>
-
-            <div class="hero" id = 'tickets-hero'>
+          <!-- landing image -->
+            <div class="hero" id = 'tickets-hero' role="img" aria-label="interior of the incline trollies">
                 <div class="hero-content">
                   <h1 class="hero-title inria-serif-bold">Ticketing Information</h1>
                   <p class="hero-subtitle inria-serif-regular">
-                    Accepted Payment Methods: Cash fares Port Authority bus passes Port Authority tickets
+                    No Reservations or Advance Tickets! <br>
+                    Tickets are available for purchase at the ticket booth located at the base of the incline.
                   </p>
                 </div>
             </div>
             
             
         </header>
-
+        <!-- main content -->
         <div class = "main" id = 'main-content'>
+          <!-- ticketing general info -->
           <div class="section-background white-background">
-            <!-- Payment Methods (simple paragraph) -->
-            <p class="text-content">
-              Accepted Payment Methods: Cash Fares; Port Authority Bus Passes; Port Authority Tickets
+            <p class="text-content important-message">
+              No Reservations or Advance Tickets! <br><br>
+              Tickets are available for purchase at the ticket booth located at the base of the incline.
             </p>
-          
-            <!-- Individual Ticketing & Fare -->
-            <h2 class="section-title" tabindex = '0'>INDIVIDUAL TICKETING & FARE</h2>
+          </div>
+          <!-- payment methods -->
+          <div class="section-background yellow-background">
+            <p class="text-content section-title">
+              Accepted Payment Methods:
+            </p>
+
+            <div class = 'flex-3 content'>
+              <div class = 'card'>
+                <h3>Cash Fares (Exact Cash)</h3>
+                <img src="../../static/images/cash.webp" alt="Cash Fares" class = 'ticket-image'>
+              </div>
+              <div class = 'card'>
+                <h3>Port Authority Bus Passes</h3>
+                <img src="../../static/images/bus-passes.jpg" alt="Connect Bus Pass" class = 'ticket-image'>
+              </div>
+              <div class = 'card'>
+                <h3>Port Authority Tickets</h3> 
+                <img src="../../static/images/port-ticket.png" alt="Port Authority Mobile Ticket" class = 'ticket-image'>
+              </div>
+            </div>
+          </div>
+          <div class="section-background white-background">
+            <!-- fares table -->
+            <h2 class="section-title"  >INDIVIDUAL TICKETING & FARE</h2>
             <div class="content">
               <table class="fare-table">
                 <thead>
@@ -84,31 +111,31 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr tabindex = '0'>
+                  <tr  >
                     <td>Seniors (54+)</td>
                     <td>Free</td>
                     <td>Free</td>
                     <td>Must present a blue or yellow PRT card or Senior Connect Card</td>
                   </tr>
-                  <tr tabindex = '0'>
+                  <tr  >
                     <td>Adults (12 - 64)</td>
                     <td>$2.50</td>
                     <td>$5.00</td>
                     <td>-</td>
                   </tr>
-                  <tr tabindex = '0'>
+                  <tr  >
                     <td>Children (6 - 11)</td>
                     <td>$1.25</td>
                     <td>$2.50</td>
                     <td>-</td>
                   </tr>
-                  <tr tabindex = '0'>
+                  <tr  >
                     <td>Children (5 &amp; under)</td>
                     <td>Free</td>
                     <td>Free</td>
                     <td>-</td>
                   </tr>
-                  <tr tabindex = '0'>
+                  <tr  >
                     <td>University of Pittsburgh, 
                       Carnegie Mellon, Chatham University Students</td>
                     <td>Free</td>
@@ -119,7 +146,7 @@
               </table>
             </div>
           
-            <h2 class="section-title" tabindex = '0'>GROUP TICKETING & FARE</h2>
+            <h2 class="section-title"  >GROUP TICKETING & FARE</h2>
             <p class="text-content">Valid For Groups Of 10+</p>
             <div class="content">
               <table class="fare-table">
@@ -131,12 +158,12 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr tabindex = '0'>
+                  <tr  >
                     <td>Adults (12 - 64)</td>
                     <td>$1.75</td>
                     <td>$3.50</td>
                   </tr>
-                  <tr tabindex = '0'>
+                  <tr  >
                     <td>Children (6 - 11)</td>
                     <td>$0.75</td>
                     <td>$1.50</td>
@@ -148,14 +175,24 @@
           
         </div>
         
-        <footer class="site-footer">
+      <footer class="site-footer">
           <div class="footer-top">
-            <!-- Logo -->
+            <!-- logo -->
             <div class="footer-logo">
               <img class = 'logo' src="../../static/images/logo.png" alt="Dequesned Incline logo" width = '123' height = '88'>
             </div>
+            <!-- social media -->
+            <ul class="footer-social">
+              <li><a target = '_blank' href="https://www.facebook.com/TheDuquesneIncline/photos/"><img src="../../static/images/socialmedia/facebook.png" alt="Facebook"></a></li>
+              <li><a target = '_blank' href="https://x.com/duquesneincline"><img src="../../static/images/socialmedia/x.png" alt="X"></a></li>
+              <li><a target = '_blank' href="https://www.instagram.com/explore/locations/289145085/duquesne-incline-pittsburgh/?hl=en"><img src="../../static/images/socialmedia/ins.png" alt="Instagram"></a></li>
+              <li><a target = '_blank' href="https://www.yelp.com/biz/duquesne-incline-pittsburgh"><img src="../../static/images/socialmedia/yelp.png" alt="Yelp"></a></li>
+              <li><a target = '_blank' href="https://www.viator.com/Pittsburgh-attractions/Duquesne-Incline/d22639-a21677"><img src="../../static/images/socialmedia/viator.png" alt="Viator"></a></li>
+              <li><a target = '_blank' href="https://www.visitpittsburgh.com/directory/duquesne-incline/"><img src="../../static/images/socialmedia/visitpittsburgh.png" alt="Visit Pittsburgh"></a></li>
+              <li><a target = '_blank' href="https://en.wikipedia.org/wiki/Duquesne_Incline"><img src="../../static/images/socialmedia/wikipedia.png" alt="Wikipedia"></a></li>
+            </ul>
         
-            <!-- Navigation Links -->
+            <!-- nav links -->
             <ul class="footer-nav">
               <li><a href="../../index.html">Home</a></li>
               <li><a href="../about.html">About</a></li>
@@ -172,16 +209,14 @@
             <p>Mailing: 1220 Grandview Ave. Pittsburgh, PA 15211</p>
           </div>
         
-          <!-- Social Icons & Copyright -->
+          <!-- copyright -->
           <div class="footer-bottom">
-            <ul class="footer-social">
-              <li><a href="https://www.facebook.com/TheDuquesneIncline/photos/"><img src="../../static/images/socialmedia/facebook.png" alt="Facebook"></a></li>
-              <li><a href="https://x.com/duquesneincline"><img src="../../static/images/socialmedia/x.png" alt="X"></a></li>
-              <li><a href="https://www.instagram.com/explore/locations/289145085/duquesne-incline-pittsburgh/?hl=en"><img src="../../static/images/socialmedia/ins.png" alt="Instagram"></a></li>
-            </ul>
         
             <p class="copyright">
               &copy; 2025. All Rights Reserved.
+            </p>
+            <p>
+              Photo credits to Expedia, Duquesne Incline, butlertransitauthority, transitapp, loomis
             </p>
           </div>
       </footer>
